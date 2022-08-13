@@ -13,3 +13,15 @@ const render = () => {
     let container = document.getElementById("container");
     container.textContent = state.count;
   };
+
+  const dispatch = (action) => {
+    state = reducer(state, action);
+    render();
+  };
+  
+  dispatch({ type: "@@INIT" });
+  
+  let button = document.getElementById("button");
+  button.addEventListener("click", () => {
+    dispatch({ type: "INCREASE_COUNT" });
+  });
