@@ -8,3 +8,8 @@ const reducer = (state = { count: 0 }, action) => {
       return state;
   }
 };
+
+const render = () => {
+    let container = document.getElementById("container");
+    container.textContent = state.count;
+  };
