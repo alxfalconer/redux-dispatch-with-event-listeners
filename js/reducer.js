@@ -25,3 +25,6 @@ const render = () => {
   button.addEventListener("click", () => {
     dispatch({ type: "INCREASE_COUNT" });
   });
+
+
+  
